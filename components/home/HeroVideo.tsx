@@ -1,15 +1,111 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import Button from "@/components/ui/Button";
 
+// ── Volume control button (mute/unmute + slider) ──────────────────────────────
+function VolumeControl({
+  videoRef,
+}: {
+  videoRef: React.RefObject<HTMLVideoElement | null>;
+}) {
+  const [muted, setMuted] = useState(true);
+  const [volume, setVolume] = useState(0.7);
+  const [showSlider, setShowSlider] = useState(false);
+
+  const toggleMute = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (muted) {
+      // Unmuting — restore volume and play with sound
+      video.muted = false;
+      video.volume = volume;
+      setMuted(false);
+      setShowSlider(true);
+    } else {
+      video.muted = true;
+      setMuted(true);
+      setShowSlider(false);
+    }
+  }, [muted, volume, videoRef]);
+
+  const handleVolume = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const v = parseFloat(e.target.value);
+      setVolume(v);
+      const video = videoRef.current;
+      if (!video) return;
+      video.volume = v;
+      if (v === 0) {
+        video.muted = true;
+        setMuted(true);
+        setShowSlider(false);
+      } else {
+        video.muted = false;
+        setMuted(false);
+      }
+    },
+    [videoRef],
+  );
+
+  return (
+    <div className="flex items-center gap-2">
+      {/* Volume slider — shown when unmuted */}
+      {showSlider && (
+        <div className="flex items-center">
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="0.05"
+            value={volume}
+            onChange={handleVolume}
+            aria-label="Volume"
+            className="h-1 w-20 cursor-pointer appearance-none rounded-full bg-white/30 accent-white sm:w-24"
+          />
+        </div>
+      )}
+
+      {/* Mute / unmute button */}
+      <button
+        type="button"
+        onClick={toggleMute}
+        aria-label={muted ? "Unmute video" : "Mute video"}
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-black/40 text-white backdrop-blur-sm transition-all duration-200 hover:bg-black/60 active:scale-95 sm:h-10 sm:w-10"
+      >
+        {muted ? (
+          /* Muted icon */
+          <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <line x1="23" y1="9" x2="17" y2="15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            <line x1="17" y1="9" x2="23" y2="15" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+        ) : volume < 0.4 ? (
+          /* Low volume icon */
+          <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <path d="M15.54 8.46a5 5 0 010 7.07" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+        ) : (
+          /* Full volume icon */
+          <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+            <path d="M15.54 8.46a5 5 0 010 7.07" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            <path d="M19.07 4.93a10 10 0 010 14.14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+        )}
+      </button>
+    </div>
+  );
+}
+
+// ── Main component ────────────────────────────────────────────────────────────
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
 
-  // Detect mobile — disable scroll animation below md (768px)
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -18,7 +114,7 @@ export default function HeroVideo() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // Play/pause on visibility
+  // Play/pause on visibility — always start muted for autoplay
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -41,19 +137,19 @@ export default function HeroVideo() {
     offset: ["start start", "end start"],
   });
 
-  const videoScale      = useTransform(scrollYProgress, [0, 0.6], [1, 0.55]);
-  const videoX          = useTransform(scrollYProgress, [0, 0.6], ["0%", "38%"]);
-  const videoRadius     = useTransform(scrollYProgress, [0, 0.4], [0, 16]);
-  const videoY          = useTransform(scrollYProgress, [0, 0.6], ["0%", "-8%"]);
-  const textOpacity     = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
-  const textYMotion     = useTransform(scrollYProgress, [0, 0.35], [0, -40]);
-  const scene1Opacity   = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
-  const scene1Y         = useTransform(scrollYProgress, [0.3, 0.6], [20, 0]);
+  const videoScale       = useTransform(scrollYProgress, [0, 0.6], [1, 0.55]);
+  const videoX           = useTransform(scrollYProgress, [0, 0.6], ["0%", "38%"]);
+  const videoRadius      = useTransform(scrollYProgress, [0, 0.4], [0, 16]);
+  const videoY           = useTransform(scrollYProgress, [0, 0.6], ["0%", "-8%"]);
+  const textOpacity      = useTransform(scrollYProgress, [0, 0.35], [1, 0]);
+  const textYMotion      = useTransform(scrollYProgress, [0, 0.35], [0, -40]);
+  const scene1Opacity    = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
+  const scene1Y          = useTransform(scrollYProgress, [0.3, 0.6], [20, 0]);
   const scrollCueOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
 
   const simple = isMobile || !!reduced;
 
-  // ── MOBILE / REDUCED-MOTION: simple static hero ──────────────────────────
+  // ── MOBILE layout ─────────────────────────────────────────────────────────
   if (simple) {
     return (
       <section
@@ -72,11 +168,16 @@ export default function HeroVideo() {
           preload="metadata"
           aria-hidden="true"
         />
-        {/* Strong gradient — mobile needs more contrast for readability */}
         <div
           className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/5"
           aria-hidden="true"
         />
+
+        {/* Volume control — top right */}
+        <div className="absolute right-4 top-[calc(var(--nav-height)+0.75rem)] z-20">
+          <VolumeControl videoRef={videoRef} />
+        </div>
+
         <div className="container-content relative z-10 pb-10 pt-28">
           <p className="mb-3 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-accent">
             AIVDP / SOWEDA
@@ -102,7 +203,7 @@ export default function HeroVideo() {
     );
   }
 
-  // ── DESKTOP: scroll animation ─────────────────────────────────────────────
+  // ── DESKTOP layout ────────────────────────────────────────────────────────
   return (
     <section
       ref={containerRef}
@@ -137,6 +238,11 @@ export default function HeroVideo() {
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-surface-dark/15" aria-hidden="true" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface-dark/60 via-transparent to-transparent" aria-hidden="true" />
         </motion.div>
+
+        {/* Volume control — top right corner, always visible */}
+        <div className="absolute right-6 top-[calc(var(--nav-height)+1rem)] z-30">
+          <VolumeControl videoRef={videoRef} />
+        </div>
 
         <motion.div
           className="absolute inset-0 z-10 flex items-end"
