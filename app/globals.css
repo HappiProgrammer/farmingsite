@@ -5,8 +5,14 @@
 /* ─── Base resets ──────────────────────────────────────────────────────────── */
 @layer base {
   :root {
-    --nav-height: 4.5rem;
+    --nav-height: 3.75rem;
     color-scheme: light;
+  }
+
+  @media (min-width: 640px) {
+    :root {
+      --nav-height: 4.5rem;
+    }
   }
 
   *,
@@ -20,16 +26,17 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   body {
-    @apply bg-white font-sans; color: #111111;
+    @apply bg-white font-sans;
+    color: #111111;
     min-height: 100dvh;
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
   }
 
-  /* Reduce motion for users who prefer it */
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -41,12 +48,10 @@
     }
   }
 
-  /* Focus visible outline — accessible, not intrusive */
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-[#2d6a2d] rounded-sm;
   }
 
-  /* Skip link: visually hidden until keyboard focus */
   a[href="#main-content"]:focus {
     position: absolute;
     left: 1rem;
@@ -61,7 +66,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display; color: #111111;
+    @apply font-display;
+    color: #111111;
   }
 
   p {
@@ -79,32 +85,29 @@
 
 /* ─── Component utilities ──────────────────────────────────────────────────── */
 @layer components {
-  /* Standard section container */
   .container-content {
-    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8; overflow-x: hidden;
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
   }
 
-  /* Section vertical rhythm */
   .section-padding {
-    @apply py-10 sm:py-14 lg:py-section xl:py-section-lg;
+    @apply py-10 sm:py-16 lg:py-20 xl:py-24;
   }
 
-  /* Verification badge pill */
   .badge-verified {
     @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-widest;
     background-color: #e8f4e8;
     color: #2d6a2d;
   }
 
-  /* Placeholder state for missing data */
   .data-placeholder {
-    @apply inline-block rounded px-2 py-0.5 italic; background-color: #f0f0f0; color: #888888;
+    @apply inline-block rounded px-2 py-0.5 italic;
+    background-color: #f0f0f0;
+    color: #888888;
   }
 }
 
-/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
 @layer utilities {
-  /* Touch-friendly tap response */
   button, a, [role="button"] {
     touch-action: manipulation;
   }

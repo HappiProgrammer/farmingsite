@@ -15,7 +15,7 @@ export default function SceneNumbers({ metrics }: SceneNumbersProps) {
       aria-labelledby="scene-numbers-heading"
     >
       <div className="container-content flex flex-col gap-12">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:gap-6 md:justify-between">
           <SectionHeading
             eyebrow="Scene 5 — The Numbers"
             heading="The project in figures"

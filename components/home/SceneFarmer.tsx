@@ -15,7 +15,7 @@ export default function SceneFarmer() {
       aria-labelledby="scene-farmer-heading"
     >
       <div className="container-content">
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+        <div className="grid items-center gap-8 md:grid-cols-2 md:gap-16">
           {/* Text */}
           <div className="flex flex-col gap-6">
             <motion.p
@@ -62,7 +62,7 @@ export default function SceneFarmer() {
             viewport={{ once: true, margin: "-80px" }}
             variants={clipReveal}
             transition={{ duration: 0.85, ease: EASE_OUT, delay: 0.1 }}
-            className="relative aspect-[4/3] overflow-hidden rounded-card-lg bg-gradient-to-br from-accent/20 to-off-white"
+            className="relative aspect-[3/2] overflow-hidden rounded-card-lg bg-gradient-to-br from-accent/20 to-off-white md:aspect-[4/3]"
           >
             <div className="absolute inset-0 flex items-center justify-center">
               <p className="text-center text-sm text-ink-light">[FARMER PORTRAIT IMAGE]</p>

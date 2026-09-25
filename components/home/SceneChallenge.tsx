@@ -58,7 +58,7 @@ export default function SceneChallenge() {
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={staggerContainer}
-          className="grid gap-8 md:grid-cols-3"
+          className="grid gap-6 md:grid-cols-3"
         >
           {points.map((point, i) => (
             <motion.div
@@ -66,7 +66,7 @@ export default function SceneChallenge() {
               variants={staggerItem}
               className="flex flex-col gap-4 border-t border-white/10 pt-8"
             >
-              <span className="font-display text-5xl font-bold text-white/20 tabular-nums">
+              <span className="font-display text-4xl font-bold text-white/20 tabular-nums sm:text-5xl">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="font-display text-lg font-bold text-white">

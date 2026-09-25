@@ -57,7 +57,7 @@ export default function Navbar() {
         >
           <span
             className={[
-              "text-[0.6rem] font-semibold uppercase tracking-[0.2em] transition-colors duration-400",
+              "hidden text-[0.6rem] font-semibold uppercase tracking-[0.2em] transition-colors duration-400 sm:block",
               transparent ? "text-white/70" : "text-accent",
             ].join(" ")}
           >
@@ -111,7 +111,7 @@ export default function Navbar() {
           aria-controls="mobile-menu"
           onClick={() => setMenuOpen((v) => !v)}
           className={[
-            "flex flex-col gap-1.5 p-2 lg:hidden",
+            "flex flex-col gap-1.5 p-3 lg:hidden",
             transparent ? "text-white" : "text-ink",
           ].join(" ")}
         >
@@ -156,7 +156,7 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={[
-                  "rounded-lg px-4 py-3.5 text-base font-medium transition-colors",
+                  "rounded-lg px-4 py-4 text-base font-medium transition-colors",
                   active
                     ? "bg-accent-light text-accent"
                     : "text-ink/80 hover:bg-off-white hover:text-ink",

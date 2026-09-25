@@ -26,7 +26,7 @@ export default function Footer() {
   return (
     <footer className="bg-surface-dark text-white/80" aria-label="Site footer">
       <div className="container-content py-10 sm:py-14 lg:py-20">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 sm:gap-10">
+        <div className="grid grid-cols-2 gap-6 sm:gap-8 md:grid-cols-4">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block" aria-label="AIVDP / SOWEDA — Home">

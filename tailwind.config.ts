@@ -9,43 +9,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Core neutrals
         "white": "#ffffff",
-        "off-white": "#f5f5f5",     // section alternation
-        "border": "#e5e5e5",        // card borders, dividers
-        "muted": "#f0f0f0",         // subtle backgrounds, empty states
-        // Text
-        "ink": "#111111",           // headings, strong text
-        "ink-mid": "#444444",       // body text
-        "ink-light": "#888888",     // muted / secondary text
-        "ink-xlight": "#bbbbbb",    // disabled / placeholder labels
-        // Accent (used sparingly)
-        "accent": "#2d6a2d",        // primary CTAs, badges, active states
-        "accent-light": "#e8f4e8",  // very light tint — badge backgrounds, hover states
-        "accent-dark": "#1e4a1e",   // hover/active on accent
-        // Dark surfaces (hero, callouts)
-        "surface-dark": "#111111",  // replaces forest-deep on dark sections
-        "surface-dark-mid": "#1e1e1e", // slightly lighter dark — card on dark bg
+        "off-white": "#f5f5f5",
+        "border": "#e5e5e5",
+        "muted": "#f0f0f0",
+        "ink": "#111111",
+        "ink-mid": "#444444",
+        "ink-light": "#888888",
+        "ink-xlight": "#bbbbbb",
+        "accent": "#2d6a2d",
+        "accent-light": "#e8f4e8",
+        "accent-dark": "#1e4a1e",
+        "surface-dark": "#111111",
+        "surface-dark-mid": "#1e1e1e",
       },
       fontFamily: {
-        // Set in layout.tsx via next/font, referenced here for consistency
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
       },
       fontSize: {
-        // Storytelling scale
-        "display-2xl": ["clamp(2rem, 7vw, 6rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
-        "display-xl":  ["clamp(1.75rem, 5vw, 4.5rem)", { lineHeight: "1.08", letterSpacing: "-0.025em" }],
-        "display-lg":  ["clamp(1.5rem, 3.5vw, 3rem)", { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
-        "display-md":  ["clamp(1.25rem, 2.5vw, 2.25rem)", { lineHeight: "1.15", letterSpacing: "-0.015em" }],
+        // Mobile-first clamp values — comfortable on 375px, scale up
+        "display-2xl": ["clamp(1.875rem, 8vw, 6rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        "display-xl":  ["clamp(1.625rem, 6vw, 4.5rem)", { lineHeight: "1.08", letterSpacing: "-0.025em" }],
+        "display-lg":  ["clamp(1.375rem, 4vw, 3rem)",   { lineHeight: "1.12", letterSpacing: "-0.02em" }],
+        "display-md":  ["clamp(1.125rem, 3vw, 2.25rem)",{ lineHeight: "1.18", letterSpacing: "-0.015em" }],
       },
       spacing: {
         "18": "4.5rem",
         "22": "5.5rem",
         "26": "6.5rem",
         "30": "7.5rem",
-        "section": "4rem",         // standard vertical section padding
-        "section-lg": "7rem",
+        "section":    "2.5rem",
+        "section-lg": "6rem",
       },
       maxWidth: {
         "prose-wide": "75ch",
@@ -66,15 +61,15 @@ const config: Config = {
       },
       keyframes: {
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(24px)" },
+          "0%":   { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in": {
-          "0%": { opacity: "0" },
+          "0%":   { opacity: "0" },
           "100%": { opacity: "1" },
         },
         "count-up": {
-          "0%": { opacity: "0", transform: "translateY(8px)" },
+          "0%":   { opacity: "0", transform: "translateY(8px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },

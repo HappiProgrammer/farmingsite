@@ -19,7 +19,7 @@ export default function FarmerProfile({
   return (
     <article aria-label={`Profile of ${farmer.name}`}>
       {/* ── Profile hero ─────────────────────────────────────────────────── */}
-      <div className="relative bg-surface-dark pt-[calc(var(--nav-height)+1.5rem)] pb-8 sm:pb-12 lg:pb-20">
+      <div className="relative bg-surface-dark pt-[calc(var(--nav-height)+1rem)] pb-8 sm:pt-[calc(var(--nav-height)+2rem)] sm:pb-12 lg:pb-20">
 
         <div className="container-content relative z-10">
           {/* Breadcrumb */}
@@ -43,9 +43,9 @@ export default function FarmerProfile({
             </ol>
           </nav>
 
-          <div className="grid items-center gap-4 grid-cols-[auto_1fr] sm:gap-6 md:gap-10">
+          <div className="grid items-center gap-4 grid-cols-[auto_1fr]">
             {/* Portrait */}
-            <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-card-lg border-2 border-border sm:h-32 sm:w-32 md:h-48 md:w-48">
+            <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-card-lg border-2 border-border sm:h-32 sm:w-32 md:h-40 md:w-40">
               {farmer.portraitSrc ? (
                 <Image
                   src={farmer.portraitSrc}
@@ -74,7 +74,7 @@ export default function FarmerProfile({
                 {farmer.verified && <VerificationBadge />}
               </div>
 
-              <h1 className="font-display text-display-lg font-bold text-white">
+              <h1 className="font-display text-2xl font-bold text-white sm:text-display-lg">
                 {farmer.name}
               </h1>
 
