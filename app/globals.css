@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base resets ──────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --nav-height: 4.5rem;
+    color-scheme: light;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink font-sans;
+    min-height: 100dvh;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Focus visible outline — accessible, not intrusive */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent rounded-sm;
+  }
+
+  /* Skip link: visually hidden until keyboard focus */
+  a[href="#main-content"]:focus {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 60;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-ink;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img, video {
+    @apply max-w-full;
+  }
+}
+
+/* ─── Component utilities ──────────────────────────────────────────────────── */
+@layer components {
+  /* Standard section container */
+  .container-content {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section vertical rhythm */
+  .section-padding {
+    @apply py-section lg:py-section-lg;
+  }
+
+  /* Verification badge pill */
+  .badge-verified {
+    @apply inline-flex items-center gap-1.5 rounded-full bg-accent-light px-2.5 py-1
+           text-xs font-semibold uppercase tracking-widest text-accent;
+  }
+
+  /* Placeholder state for missing data */
+  .data-placeholder {
+    @apply inline-block rounded bg-muted px-2 py-0.5 text-ink-light italic;
+  }
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "story-001",
+    "title": "[FARMER STORY TITLE]",
+    "description": "[BRIEF DESCRIPTION OF THIS VIDEO STORY — what the viewer will see and learn.]",
+    "thumbnailSrc": "/images/nuseryImage1.webp",
+    "thumbnailAlt": "An oil-palm farmer tending seedlings in a nursery in the South West Region",
+    "videoSrc": "/videos/Palm%20Oil%20farmer.mp4",
+    "durationLabel": "[DURATION, e.g. 4 min]",
+    "farmerName": "[FARMER FULL NAME]",
+    "farmerSlug": "farmer-njombe-001",
+    "featured": true,
+    "publishedDate": null
+  },
+  {
+    "id": "story-002",
+    "title": "[SECOND STORY TITLE]",
+    "description": "[BRIEF DESCRIPTION OF THIS VIDEO STORY.]",
+    "thumbnailSrc": "/images/nuseryImage2.webp",
+    "thumbnailAlt": "Oil-palm nursery rows in the South West Region",
+    "videoSrc": null,
+    "durationLabel": null,
+    "farmerName": "[FARMER FULL NAME]",
+    "farmerSlug": "farmer-muyuka-002",
+    "featured": false,
+    "publishedDate": null
+  },
+  {
+    "id": "story-003",
+    "title": "[THIRD STORY TITLE]",
+    "description": "[BRIEF DESCRIPTION OF THIS VIDEO STORY.]",
+    "thumbnailSrc": "/images/nuseryImage3.webp",
+    "thumbnailAlt": "Young oil-palm seedlings ready for planting",
+    "videoSrc": null,
+    "durationLabel": null,
+    "farmerName": "[FARMER FULL NAME]",
+    "farmerSlug": "farmer-tiko-003",
+    "featured": false,
+    "publishedDate": null
+  }
+]

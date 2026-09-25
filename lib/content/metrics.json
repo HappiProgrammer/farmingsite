@@ -1,0 +1,47 @@
+[
+  {
+    "id": "farmers-supported",
+    "label": "Farmers Supported",
+    "value": null,
+    "unit": "farmers",
+    "description": "Total oil-palm farmers who have received support through the AIVDP/SOWEDA programme.",
+    "status": "coming-soon",
+    "iconName": "farmers"
+  },
+  {
+    "id": "communities-reached",
+    "label": "Communities Reached",
+    "value": null,
+    "unit": "communities",
+    "description": "Rural communities in the South West Region where supported farmers are based.",
+    "status": "coming-soon",
+    "iconName": "communities"
+  },
+  {
+    "id": "nurseries-established",
+    "label": "Nurseries Established",
+    "value": null,
+    "unit": "nurseries",
+    "description": "Farmer-owned nurseries established or upgraded through the programme.",
+    "status": "coming-soon",
+    "iconName": "nurseries"
+  },
+  {
+    "id": "seedlings-produced",
+    "label": "Seedlings Produced",
+    "value": null,
+    "unit": "seedlings",
+    "description": "Improved oil-palm seedlings produced and made available across all supported nurseries.",
+    "status": "coming-soon",
+    "iconName": "seedlings"
+  },
+  {
+    "id": "project-locations",
+    "label": "Project Locations",
+    "value": null,
+    "unit": "locations",
+    "description": "Distinct geographic locations where the project operates in the South West Region.",
+    "status": "coming-soon",
+    "iconName": "locations"
+  }
+]

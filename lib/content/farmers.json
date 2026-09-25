@@ -1,0 +1,127 @@
+[
+  {
+    "id": "farmer-001",
+    "slug": "farmer-njombe-001",
+    "name": "[FARMER FULL NAME]",
+    "role": "Oil Palm Farmer & Nursery Producer",
+    "locationArea": "Njombe",
+    "locationRegion": "South West Region",
+    "portraitSrc": "/images/placeholder-farmer.jpg",
+    "portraitAlt": "Portrait of an oil-palm farmer in Njombe",
+    "bio": "[ONE OR TWO SENTENCE OVERVIEW OF THIS FARMER — what they grow, how long they've been farming, what support they received.]",
+    "story": "[FULL STORY OF THIS FARMER — their background, the challenges they faced before support, what changed when they joined the AIVDP/SOWEDA programme, and what their nursery means to them and their community.]",
+    "nurseryId": "nursery-001",
+    "verified": true,
+    "joinedYear": null,
+    "galleryImages": [
+      {
+        "src": "/images/nuseryImage1.webp",
+        "alt": "Oil-palm seedlings at the Njombe nursery belonging to this farmer",
+        "caption": "[CAPTION]"
+      },
+      {
+        "src": "/images/nuseryImage2.webp",
+        "alt": "Close-up of oil-palm seedlings in the Njombe nursery",
+        "caption": "[CAPTION]"
+      }
+    ],
+    "whatsappNumber": null,
+    "coordinates": { "lat": 4.62, "lng": 9.44 }
+  },
+  {
+    "id": "farmer-002",
+    "slug": "farmer-muyuka-002",
+    "name": "[FARMER FULL NAME]",
+    "role": "Oil Palm Farmer & Nursery Producer",
+    "locationArea": "Muyuka",
+    "locationRegion": "South West Region",
+    "portraitSrc": "/images/placeholder-farmer.jpg",
+    "portraitAlt": "Portrait of an oil-palm farmer in Muyuka",
+    "bio": "[BIO FOR THIS FARMER.]",
+    "story": "[FULL STORY FOR THIS FARMER.]",
+    "nurseryId": "nursery-002",
+    "verified": true,
+    "joinedYear": null,
+    "galleryImages": [
+      {
+        "src": "/images/nuseryImage2.webp",
+        "alt": "Young oil-palm seedlings at the Muyuka nursery",
+        "caption": "[CAPTION]"
+      }
+    ],
+    "whatsappNumber": null,
+    "coordinates": { "lat": 4.29, "lng": 9.41 }
+  },
+  {
+    "id": "farmer-003",
+    "slug": "farmer-tiko-003",
+    "name": "[FARMER FULL NAME]",
+    "role": "Oil Palm Farmer & Nursery Producer",
+    "locationArea": "Tiko",
+    "locationRegion": "South West Region",
+    "portraitSrc": "/images/placeholder-farmer.jpg",
+    "portraitAlt": "Portrait of an oil-palm farmer in Tiko",
+    "bio": "[BIO FOR THIS FARMER.]",
+    "story": "[FULL STORY FOR THIS FARMER.]",
+    "nurseryId": "nursery-003",
+    "verified": false,
+    "joinedYear": null,
+    "galleryImages": [
+      {
+        "src": "/images/nuseryImage3.webp",
+        "alt": "New nursery beds being established in Tiko",
+        "caption": "[CAPTION]"
+      }
+    ],
+    "whatsappNumber": null,
+    "coordinates": { "lat": 4.07, "lng": 9.36 }
+  },
+  {
+    "id": "farmer-004",
+    "slug": "farmer-kumba-004",
+    "name": "[FARMER FULL NAME]",
+    "role": "Oil Palm Farmer & Nursery Producer",
+    "locationArea": "Kumba",
+    "locationRegion": "South West Region",
+    "portraitSrc": "/images/placeholder-farmer.jpg",
+    "portraitAlt": "Portrait of an oil-palm farmer in Kumba",
+    "bio": "[BIO FOR THIS FARMER.]",
+    "story": "[FULL STORY FOR THIS FARMER.]",
+    "nurseryId": "nursery-004",
+    "verified": true,
+    "joinedYear": null,
+    "galleryImages": [
+      {
+        "src": "/images/nuseryImage4.webp",
+        "alt": "Oil-palm seedlings growing at the Kumba nursery",
+        "caption": "[CAPTION]"
+      }
+    ],
+    "whatsappNumber": null,
+    "coordinates": { "lat": 4.64, "lng": 9.44 }
+  },
+  {
+    "id": "farmer-005",
+    "slug": "farmer-buea-005",
+    "name": "[FARMER FULL NAME]",
+    "role": "Oil Palm Farmer & Nursery Producer",
+    "locationArea": "Buea",
+    "locationRegion": "South West Region",
+    "portraitSrc": "/images/placeholder-farmer.jpg",
+    "portraitAlt": "Portrait of an oil-palm farmer in Buea",
+    "bio": "[BIO FOR THIS FARMER.]",
+    "story": "[FULL STORY FOR THIS FARMER.]",
+    "nurseryId": "nursery-005",
+    "verified": true,
+    "joinedYear": null,
+    "galleryImages": [
+      {
+        "src": "/images/nuseryImage5.webp",
+        "alt": "Oil-palm nursery on the slopes near Buea, Mount Cameroon in the background",
+        "caption": "[CAPTION]"
+      }
+    ],
+    "whatsappNumber": null,
+    "coordinates": { "lat": 4.16, "lng": 9.23 }
+  }
+]

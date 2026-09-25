@@ -1,0 +1,22 @@
+[
+  {
+    "id": "aivdp",
+    "acronym": "AIVDP",
+    "fullName": "[FULL NAME OF AIVDP]",
+    "role": "Project Implementer",
+    "description": "[DESCRIPTION OF AIVDP'S ROLE IN THE OIL-PALM FARMER DEVELOPMENT PROJECT — mission, scope, and activities.]",
+    "logoSrc": null,
+    "logoAlt": null,
+    "websiteUrl": null
+  },
+  {
+    "id": "soweda",
+    "acronym": "SOWEDA",
+    "fullName": "South West Development Authority",
+    "role": "Partner Organization",
+    "description": "[DESCRIPTION OF SOWEDA'S ROLE IN THE OIL-PALM FARMER DEVELOPMENT PROJECT — mandate, geographic scope, and contribution to the AIVDP initiative.]",
+    "logoSrc": null,
+    "logoAlt": null,
+    "websiteUrl": null
+  }
+]

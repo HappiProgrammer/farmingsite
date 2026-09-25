@@ -1,0 +1,145 @@
+[
+  {
+    "id": "nursery-001",
+    "farmerId": "farmer-001",
+    "name": "[NURSERY NAME] — Njombe Nursery",
+    "establishedYear": null,
+    "locationArea": "Njombe",
+    "locationRegion": "South West Region",
+    "status": "active",
+    "totalCapacity": null,
+    "currentSeedlings": null,
+    "availableSeedlings": null,
+    "seedlingVarieties": [
+      {
+        "variety": "[VARIETY NAME — e.g. Tenera Hybrid]",
+        "count": null,
+        "pricePerSeedling": null,
+        "notes": "[NOTES ON THIS VARIETY]"
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/nuseryImage1.webp",
+        "alt": "Rows of healthy oil-palm seedlings at the Njombe nursery",
+        "caption": "[CAPTION FOR THIS NURSERY IMAGE]"
+      },
+      {
+        "src": "/images/nuseryImage2.webp",
+        "alt": "Close-up of oil-palm seedlings in the Njombe nursery",
+        "caption": null
+      }
+    ],
+    "description": "[DESCRIPTION OF THIS NURSERY — size, current activity, and what makes it notable.]"
+  },
+  {
+    "id": "nursery-002",
+    "farmerId": "farmer-002",
+    "name": "[NURSERY NAME] — Muyuka Nursery",
+    "establishedYear": null,
+    "locationArea": "Muyuka",
+    "locationRegion": "South West Region",
+    "status": "active",
+    "totalCapacity": null,
+    "currentSeedlings": null,
+    "availableSeedlings": null,
+    "seedlingVarieties": [
+      {
+        "variety": "[VARIETY NAME]",
+        "count": null,
+        "pricePerSeedling": null,
+        "notes": null
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/nuseryImage2.webp",
+        "alt": "Young oil-palm seedlings at the Muyuka nursery",
+        "caption": "[CAPTION FOR THIS NURSERY IMAGE]"
+      },
+      {
+        "src": "/images/nuseryImage3.webp",
+        "alt": "Nursery beds at the Muyuka growing site",
+        "caption": null
+      }
+    ],
+    "description": "[DESCRIPTION OF THIS NURSERY.]"
+  },
+  {
+    "id": "nursery-003",
+    "farmerId": "farmer-003",
+    "name": "[NURSERY NAME] — Tiko Nursery",
+    "establishedYear": null,
+    "locationArea": "Tiko",
+    "locationRegion": "South West Region",
+    "status": "establishing",
+    "totalCapacity": null,
+    "currentSeedlings": null,
+    "availableSeedlings": null,
+    "seedlingVarieties": [],
+    "images": [
+      {
+        "src": "/images/nuseryImage3.webp",
+        "alt": "Oil-palm nursery beds being established in Tiko",
+        "caption": "[CAPTION FOR THIS NURSERY IMAGE]"
+      }
+    ],
+    "description": "[DESCRIPTION OF THIS NURSERY.]"
+  },
+  {
+    "id": "nursery-004",
+    "farmerId": "farmer-004",
+    "name": "[NURSERY NAME] — Kumba Nursery",
+    "establishedYear": null,
+    "locationArea": "Kumba",
+    "locationRegion": "South West Region",
+    "status": "active",
+    "totalCapacity": null,
+    "currentSeedlings": null,
+    "availableSeedlings": null,
+    "seedlingVarieties": [
+      {
+        "variety": "[VARIETY NAME]",
+        "count": null,
+        "pricePerSeedling": null,
+        "notes": null
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/nuseryImage4.webp",
+        "alt": "Oil-palm seedlings growing at the Kumba nursery",
+        "caption": "[CAPTION FOR THIS NURSERY IMAGE]"
+      }
+    ],
+    "description": "[DESCRIPTION OF THIS NURSERY.]"
+  },
+  {
+    "id": "nursery-005",
+    "farmerId": "farmer-005",
+    "name": "[NURSERY NAME] — Buea Nursery",
+    "establishedYear": null,
+    "locationArea": "Buea",
+    "locationRegion": "South West Region",
+    "status": "active",
+    "totalCapacity": null,
+    "currentSeedlings": null,
+    "availableSeedlings": null,
+    "seedlingVarieties": [
+      {
+        "variety": "[VARIETY NAME]",
+        "count": null,
+        "pricePerSeedling": null,
+        "notes": null
+      }
+    ],
+    "images": [
+      {
+        "src": "/images/nuseryImage5.webp",
+        "alt": "Oil-palm nursery on the slopes near Buea",
+        "caption": "[CAPTION FOR THIS NURSERY IMAGE]"
+      }
+    ],
+    "description": "[DESCRIPTION OF THIS NURSERY.]"
+  }
+]
