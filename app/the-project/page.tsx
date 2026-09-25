@@ -56,23 +56,11 @@ export default function TheProjectPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
+        className="relative overflow-hidden bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
         aria-labelledby="project-hero-heading"
       >
-        {/* Subtle diagonal pattern */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.04]"
-          aria-hidden="true"
-          style={{
-            backgroundImage: `repeating-linear-gradient(
-              -45deg,
-              transparent, transparent 60px,
-              rgba(200,168,75,0.5) 60px, rgba(200,168,75,0.5) 61px
-            )`,
-          }}
-        />
         <div className="container-content relative z-10 max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             AIVDP / SOWEDA
           </p>
           <h1
@@ -81,7 +69,7 @@ export default function TheProjectPage() {
           >
             The Project
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-cream/65">
+          <p className="mt-6 text-lg leading-relaxed text-white/65">
             [PROJECT DESCRIPTION — a factual overview of the AIVDP/SOWEDA
             oil-palm farmer development initiative: what it is, where it
             operates, who it supports, and what it aims to achieve.]
@@ -91,7 +79,7 @@ export default function TheProjectPage() {
 
       {/* ── What this is ─────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="about-heading"
       >
         <div className="container-content grid items-start gap-16 md:grid-cols-2">
@@ -118,12 +106,12 @@ export default function TheProjectPage() {
             ].map(({ label, value }) => (
               <div
                 key={label}
-                className="flex items-start justify-between gap-4 border-b border-parchment py-4 last:border-0"
+                className="flex items-start justify-between gap-4 border-b border-border py-4 last:border-0"
               >
                 <span className="text-xs font-semibold uppercase tracking-wide text-ink-light">
                   {label}
                 </span>
-                <span className="text-right text-sm font-medium text-forest-deep">
+                <span className="text-right text-sm font-medium text-ink">
                   {value}
                 </span>
               </div>
@@ -134,7 +122,7 @@ export default function TheProjectPage() {
 
       {/* ── How it works — 4 phases ───────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream-warm"
+        className="section-padding bg-off-white"
         aria-labelledby="approach-heading"
       >
         <div className="container-content flex flex-col gap-12">
@@ -148,12 +136,12 @@ export default function TheProjectPage() {
             {projectPhases.map(({ phase, title, body }) => (
               <div
                 key={phase}
-                className="relative flex flex-col gap-4 rounded-card-lg border border-parchment bg-white p-7 shadow-sm"
+                className="relative flex flex-col gap-4 rounded-card-lg border border-border bg-white p-7 shadow-sm"
               >
-                <span className="font-display text-5xl font-bold text-forest-mid/15 tabular-nums">
+                <span className="font-display text-5xl font-bold text-accent/15 tabular-nums">
                   {phase}
                 </span>
-                <h3 className="font-display text-base font-bold leading-snug text-forest-deep">
+                <h3 className="font-display text-base font-bold leading-snug text-ink">
                   {title}
                 </h3>
                 <p className="text-sm leading-relaxed text-ink-mid">{body}</p>
@@ -165,7 +153,7 @@ export default function TheProjectPage() {
 
       {/* ── Organizations ──────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-forest-deep"
+        className="section-padding bg-surface-dark"
         aria-labelledby="orgs-heading"
       >
         <div className="container-content">
@@ -175,7 +163,7 @@ export default function TheProjectPage() {
 
       {/* ── Project map ───────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream-warm"
+        className="section-padding bg-off-white"
         aria-labelledby="project-map-heading"
       >
         <div className="container-content flex flex-col gap-10">
@@ -185,7 +173,7 @@ export default function TheProjectPage() {
             subheading="Locations are shown at community or area level only. Click a pin to open the farmer profile for that area."
             id="project-map-heading"
           />
-          <div className="overflow-hidden rounded-card-lg border border-parchment bg-white shadow-sm">
+          <div className="overflow-hidden rounded-card-lg border border-border bg-white shadow-sm">
             <ProjectMap pins={mapPins} className="max-h-[520px]" />
           </div>
           <p className="text-xs text-ink-light">
@@ -197,7 +185,7 @@ export default function TheProjectPage() {
 
       {/* ── Partners placeholder ───────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="partners-heading"
       >
         <div className="container-content flex flex-col gap-8">
@@ -205,7 +193,7 @@ export default function TheProjectPage() {
             eyebrow="Partners & Funders"
             heading="Who makes this possible"
           />
-          <div className="rounded-card-lg border border-dashed border-parchment bg-cream-warm p-10 text-center">
+          <div className="rounded-card-lg border border-dashed border-border bg-off-white p-10 text-center">
             <p className="text-sm italic text-ink-light">
               [PARTNER LOGOS AND FUNDER ACKNOWLEDGEMENTS WILL BE DISPLAYED
               HERE ONCE SUPPLIED. DO NOT ADD FABRICATED PARTNER NAMES OR
@@ -216,12 +204,12 @@ export default function TheProjectPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="section-padding bg-forest-mid" aria-label="Call to action">
+      <section className="section-padding bg-surface-dark" aria-label="Call to action">
         <div className="container-content flex flex-col items-center gap-6 text-center">
-          <h2 className="font-display text-display-md font-bold text-cream">
+          <h2 className="font-display text-display-md font-bold text-white">
             Ready to meet the farmers?
           </h2>
-          <p className="max-w-md text-base text-cream/70">
+          <p className="max-w-md text-base text-white/70">
             Each supported farmer has a profile, a nursery, and a story.
             Browse the directory to find nurseries and available seedlings near you.
           </p>

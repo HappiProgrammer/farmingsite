@@ -9,7 +9,7 @@ interface NurseryGalleryProps {
 export default function NurseryGallery({ images, nurseryName }: NurseryGalleryProps) {
   if (images.length === 0) {
     return (
-      <div className="flex aspect-video items-center justify-center rounded-card-lg border border-dashed border-parchment bg-cream-warm">
+      <div className="flex aspect-video items-center justify-center rounded-card-lg border border-dashed border-border bg-off-white">
         <p className="text-sm italic text-ink-light">[NURSERY IMAGES TO BE ADDED]</p>
       </div>
     );
@@ -33,7 +33,7 @@ export default function NurseryGallery({ images, nurseryName }: NurseryGalleryPr
       {/* Primary image — always full height on its own or spanning rows */}
       <div
         className={[
-          "relative overflow-hidden rounded-card-lg bg-cream-warm",
+          "relative overflow-hidden rounded-card-lg bg-off-white",
           rest.length >= 2 ? "row-span-2" : "",
           rest.length === 0 ? "aspect-video col-span-1" : "aspect-square",
         ].join(" ")}
@@ -47,7 +47,7 @@ export default function NurseryGallery({ images, nurseryName }: NurseryGalleryPr
           priority
         />
         {primary.caption && (
-          <p className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-forest-deep/80 to-transparent px-3 py-2 text-xs text-cream/80">
+          <p className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-surface-dark/80 to-transparent px-3 py-2 text-xs text-white/80">
             {primary.caption}
           </p>
         )}
@@ -57,7 +57,7 @@ export default function NurseryGallery({ images, nurseryName }: NurseryGalleryPr
       {rest.slice(0, 2).map((img, i) => (
         <div
           key={`${img.src}-${i}`}
-          className="relative aspect-square overflow-hidden rounded-card-lg bg-cream-warm"
+          className="relative aspect-square overflow-hidden rounded-card-lg bg-off-white"
         >
           <Image
             src={img.src}
@@ -67,7 +67,7 @@ export default function NurseryGallery({ images, nurseryName }: NurseryGalleryPr
             className="object-cover"
           />
           {img.caption && (
-            <p className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-forest-deep/80 to-transparent px-3 py-2 text-xs text-cream/80">
+            <p className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-surface-dark/80 to-transparent px-3 py-2 text-xs text-white/80">
               {img.caption}
             </p>
           )}

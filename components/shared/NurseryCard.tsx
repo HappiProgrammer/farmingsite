@@ -12,11 +12,11 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
   const profileHref = farmer ? `/farmers/${farmer.slug}` : "/farmers";
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-card-lg border border-parchment bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+    <article className="group flex flex-col overflow-hidden rounded-card-lg border border-border bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
       {/* Cover image */}
       <Link
         href={profileHref}
-        className="relative block aspect-video overflow-hidden bg-cream-warm"
+        className="relative block aspect-video overflow-hidden bg-off-white"
         tabIndex={-1}
         aria-hidden="true"
       >
@@ -29,8 +29,8 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
             className="object-cover transition-transform duration-600 group-hover:scale-105"
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-forest-mid/10 to-cream-warm">
-            <svg viewBox="0 0 48 48" fill="none" className="h-12 w-12 text-forest-mid/30" aria-hidden="true">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-accent/10 to-off-white">
+            <svg viewBox="0 0 48 48" fill="none" className="h-12 w-12 text-accent/30" aria-hidden="true">
               <path d="M24 44V26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               <path d="M24 26C24 26 12 18 12 10c6 0 12 6 12 6s6-6 12-6c0 8-12 16-12 16z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
             </svg>
@@ -44,8 +44,8 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
             className={[
               "inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold",
               nursery.isReady
-                ? "bg-forest-mid text-cream"
-                : "bg-cream/90 text-ink-mid backdrop-blur-sm",
+                ? "bg-accent text-white"
+                : "bg-white/90 text-ink-mid backdrop-blur-sm",
             ].join(" ")}
           >
             <span
@@ -62,7 +62,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
         {/* Seedlings available badge */}
         {nursery.hasAvailableSeedlings && (
           <div className="absolute right-3 top-3">
-            <span className="inline-flex items-center rounded-full bg-agri-yellow/90 px-2.5 py-1 text-xs font-semibold text-forest-deep backdrop-blur-sm">
+            <span className="inline-flex items-center rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm">
               Seedlings Available
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           </p>
           <Link
             href={profileHref}
-            className="mt-1 block font-display text-base font-bold leading-snug text-forest-deep transition-colors hover:text-forest-mid"
+            className="mt-1 block font-display text-base font-bold leading-snug text-ink transition-colors hover:text-accent"
           >
             {nursery.name}
           </Link>
@@ -103,7 +103,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
               <dt className="text-[0.65rem] font-semibold uppercase tracking-wider text-ink-light">
                 {term}
               </dt>
-              <dd className="text-sm font-medium text-forest-deep">
+              <dd className="text-sm font-medium text-ink">
                 {value ?? <span className="italic text-ink-light/60">[{term}]</span>}
               </dd>
             </div>
@@ -112,7 +112,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
 
         {/* Varieties */}
         {nursery.seedlingVarieties.length > 0 && (
-          <div className="border-t border-parchment pt-3">
+          <div className="border-t border-border pt-3">
             <p className="mb-2 text-[0.65rem] font-semibold uppercase tracking-wider text-ink-light">
               Varieties
             </p>
@@ -120,7 +120,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
               {nursery.seedlingVarieties.map((v, i) => (
                 <span
                   key={i}
-                  className="rounded-full bg-cream-warm px-2.5 py-0.5 text-xs text-ink-mid"
+                  className="rounded-full bg-off-white px-2.5 py-0.5 text-xs text-ink-mid"
                 >
                   {v.variety}
                 </span>
@@ -130,13 +130,13 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
         )}
 
         {/* Farmer attribution + CTA */}
-        <div className="mt-auto flex items-center justify-between gap-3 border-t border-parchment pt-3">
+        <div className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-3">
           {farmer ? (
             <p className="text-xs text-ink-light">
               Farmer:{" "}
               <Link
                 href={`/farmers/${farmer.slug}`}
-                className="font-semibold text-forest-mid transition-colors hover:text-forest-deep"
+                className="font-semibold text-accent transition-colors hover:text-ink"
               >
                 {farmer.name}
               </Link>
@@ -146,7 +146,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           )}
           <Link
             href={profileHref}
-            className="flex-shrink-0 text-xs font-semibold text-forest-mid transition-colors hover:text-forest-deep"
+            className="flex-shrink-0 text-xs font-semibold text-accent transition-colors hover:text-ink"
             aria-label={`View nursery and farmer profile for ${nursery.name}`}
           >
             View profile →

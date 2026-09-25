@@ -59,7 +59,7 @@ export default function NurseryDirectoryClient({
     <div className="flex flex-col gap-8">
       {/* Filter bar */}
       <div
-        className="flex flex-wrap items-end gap-4 rounded-card-lg border border-parchment bg-cream-warm p-5"
+        className="flex flex-wrap items-end gap-4 rounded-card-lg border border-border bg-off-white p-5"
         role="search"
         aria-label="Filter nurseries"
       >
@@ -79,7 +79,7 @@ export default function NurseryDirectoryClient({
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Nursery name, area, or farmer…"
-              className="w-full rounded-card border border-parchment bg-white py-2.5 pl-9 pr-4 text-sm text-ink placeholder:text-ink-light/60 focus:border-forest-mid focus:outline-none focus:ring-1 focus:ring-forest-mid"
+              className="w-full rounded-card border border-border bg-white py-2.5 pl-9 pr-4 text-sm text-ink placeholder:text-ink-light/60 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function NurseryDirectoryClient({
             id="status-filter"
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value as NurseryStatus | "all")}
-            className="rounded-card border border-parchment bg-white px-3 py-2.5 text-sm text-ink focus:border-forest-mid focus:outline-none focus:ring-1 focus:ring-forest-mid"
+            className="rounded-card border border-border bg-white px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           >
             {ALL_STATUSES.map(({ value, label }) => (
               <option key={value} value={value}>{label}</option>
@@ -111,7 +111,7 @@ export default function NurseryDirectoryClient({
               id="nursery-region-filter"
               value={regionFilter}
               onChange={(e) => setRegionFilter(e.target.value)}
-              className="rounded-card border border-parchment bg-white px-3 py-2.5 text-sm text-ink focus:border-forest-mid focus:outline-none focus:ring-1 focus:ring-forest-mid"
+              className="rounded-card border border-border bg-white px-3 py-2.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
             >
               <option value="all">All regions</option>
               {regions.map((r) => (
@@ -127,7 +127,7 @@ export default function NurseryDirectoryClient({
             type="checkbox"
             checked={seedlingsOnly}
             onChange={(e) => setSeedlingsOnly(e.target.checked)}
-            className="h-4 w-4 rounded border-parchment text-forest-mid focus:ring-forest-mid"
+            className="h-4 w-4 rounded border-border text-accent focus:ring-accent"
           />
           <span className="text-sm font-medium text-ink-mid">Seedlings available</span>
         </label>
@@ -148,7 +148,7 @@ export default function NurseryDirectoryClient({
           ))}
         </div>
       ) : (
-        <div className="flex flex-col items-center gap-4 rounded-card-lg border border-dashed border-parchment py-16 text-center">
+        <div className="flex flex-col items-center gap-4 rounded-card-lg border border-dashed border-border py-16 text-center">
           <p className="text-base font-medium text-ink-mid">No nurseries match your filters.</p>
           <button
             type="button"
@@ -158,7 +158,7 @@ export default function NurseryDirectoryClient({
               setRegionFilter("all");
               setSeedlingsOnly(false);
             }}
-            className="text-sm font-semibold text-forest-mid underline-offset-2 hover:underline"
+            className="text-sm font-semibold text-accent underline-offset-2 hover:underline"
           >
             Clear filters
           </button>

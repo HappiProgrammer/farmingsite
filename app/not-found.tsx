@@ -3,10 +3,10 @@ import Button from "@/components/ui/Button";
 export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center gap-6 px-4 text-center">
-      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
         404
       </p>
-      <h1 className="font-display text-display-lg font-bold text-forest-deep">
+      <h1 className="font-display text-display-lg font-bold text-ink">
         Page not found
       </h1>
       <p className="max-w-sm text-base text-ink-mid">
@@ -16,7 +16,7 @@ export default function NotFound() {
         <Button href="/" variant="primary" size="md">
           Go home
         </Button>
-        <Button href="/farmers" variant="ghost" size="md" className="!text-forest-mid">
+        <Button href="/farmers" variant="ghost" size="md" className="!text-accent">
           Browse farmers
         </Button>
       </div>

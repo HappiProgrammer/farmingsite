@@ -17,11 +17,11 @@ function Field({ label, id, required, children }: FieldProps) {
     <div className="flex flex-col gap-1.5">
       <label
         htmlFor={id}
-        className="text-sm font-semibold text-forest-deep"
+        className="text-sm font-semibold text-ink"
       >
         {label}
         {required && (
-          <span className="ml-1 text-earth-mid" aria-hidden="true">
+          <span className="ml-1 text-ink-mid" aria-hidden="true">
             *
           </span>
         )}
@@ -32,7 +32,7 @@ function Field({ label, id, required, children }: FieldProps) {
 }
 
 const inputClasses =
-  "w-full rounded-card border border-parchment bg-cream px-4 py-3 text-sm text-ink placeholder:text-ink-light/60 transition-colors duration-200 focus:border-forest-mid focus:outline-none focus:ring-1 focus:ring-forest-mid";
+  "w-full rounded-card border border-border bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-light/60 transition-colors duration-200 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent";
 
 export default function ContactForm() {
   const [state, setState] = useState<FormState>("idle");
@@ -49,14 +49,14 @@ export default function ContactForm() {
       <div
         role="status"
         aria-live="polite"
-        className="flex flex-col items-start gap-4 rounded-card-lg border border-forest-mid/30 bg-forest-mid/5 p-8"
+        className="flex flex-col items-start gap-4 rounded-card-lg border border-accent/30 bg-accent/5 p-8"
       >
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-forest-mid/15 text-forest-mid">
+        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
           <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
             <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
-        <h3 className="font-display text-xl font-bold text-forest-deep">
+        <h3 className="font-display text-xl font-bold text-ink">
           Message sent
         </h3>
         <p className="text-sm leading-relaxed text-ink-mid">
@@ -148,7 +148,7 @@ export default function ContactForm() {
       </p>
 
       {state === "error" && (
-        <p role="alert" className="text-sm font-semibold text-earth-mid">
+        <p role="alert" className="text-sm font-semibold text-ink-mid">
           Something went wrong. Please try again or contact us directly.
         </p>
       )}

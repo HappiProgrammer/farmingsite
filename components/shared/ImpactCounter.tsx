@@ -105,19 +105,19 @@ function CounterCard({ metric }: { metric: ProjectMetricDTO }) {
       className="flex flex-col items-center gap-3 rounded-card-lg bg-white/5 px-6 py-8 text-center backdrop-blur-sm"
     >
       {/* Icon */}
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-agri-yellow/15 text-agri-yellow">
+      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
         <MetricIcon name={metric.iconName} />
       </div>
 
       {/* Value */}
       {hasData ? (
-        <p className="font-display text-display-md font-bold text-cream tabular-nums">
+        <p className="font-display text-display-md font-bold text-white tabular-nums">
           {new Intl.NumberFormat("en-US").format(count)}
           {metric.unit === "seedlings" ? "+" : ""}
         </p>
       ) : (
         <p
-          className="font-display text-display-md font-bold text-cream/30"
+          className="font-display text-display-md font-bold text-white/30"
           aria-label={metric.pendingLabel}
         >
           —
@@ -125,13 +125,13 @@ function CounterCard({ metric }: { metric: ProjectMetricDTO }) {
       )}
 
       {/* Label */}
-      <p className="text-sm font-semibold uppercase tracking-widest text-cream/70">
+      <p className="text-sm font-semibold uppercase tracking-widest text-white/70">
         {metric.label}
       </p>
 
       {/* Pending notice */}
       {!hasData && (
-        <p className="text-xs text-cream/35">{metric.pendingLabel}</p>
+        <p className="text-xs text-white/35">{metric.pendingLabel}</p>
       )}
     </div>
   );

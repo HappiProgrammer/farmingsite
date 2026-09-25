@@ -45,7 +45,7 @@ export default function FeaturedStoryPlayer({ story }: FeaturedStoryPlayerProps)
   return (
     <div
       id={story.id}
-      className="group relative overflow-hidden rounded-card-lg bg-forest-deep"
+      className="group relative overflow-hidden rounded-card-lg bg-surface-dark"
       style={{ aspectRatio: "16 / 9" }}
     >
       {story.videoSrc ? (
@@ -70,12 +70,12 @@ export default function FeaturedStoryPlayer({ story }: FeaturedStoryPlayerProps)
           priority
         />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-mid/40 to-forest-deep" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/40 to-surface-dark" />
       )}
 
       {/* Gradient overlay */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-forest-deep/90 via-forest-deep/20 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/20 to-transparent"
         aria-hidden="true"
       />
 
@@ -112,24 +112,24 @@ export default function FeaturedStoryPlayer({ story }: FeaturedStoryPlayerProps)
       {/* Meta overlay at bottom */}
       <div className="absolute bottom-0 left-0 right-0 p-6">
         {story.farmerName && (
-          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-agri-yellow">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-accent">
             {story.farmerName}
           </p>
         )}
         <h2 className="font-display text-display-md font-bold text-white">
           {story.title}
         </h2>
-        <p className="mt-2 max-w-xl text-sm leading-relaxed text-cream/65">
+        <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/65">
           {story.description}
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-4">
           {story.durationLabel && (
-            <span className="text-xs text-cream/40">{story.durationLabel}</span>
+            <span className="text-xs text-white/40">{story.durationLabel}</span>
           )}
           {story.farmerSlug && (
             <Link
               href={`/farmers/${story.farmerSlug}`}
-              className="text-sm font-semibold text-agri-yellow transition-colors hover:text-agri-yellow-light"
+              className="text-sm font-semibold text-accent transition-colors hover:text-accent-light"
             >
               View farmer profile →
             </Link>

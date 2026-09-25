@@ -79,7 +79,7 @@ export default function ImpactPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
         aria-labelledby="impact-hero-heading"
       >
         <div className="container-content max-w-3xl">

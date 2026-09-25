@@ -16,7 +16,7 @@ export default function StoryCard({
     <article
       id={story.id}
       className={[
-        "group relative overflow-hidden rounded-card-lg bg-forest-deep",
+        "group relative overflow-hidden rounded-card-lg bg-surface-dark",
         featured ? "aspect-video md:col-span-2" : "aspect-video",
       ].join(" ")}
     >
@@ -34,12 +34,12 @@ export default function StoryCard({
           className="object-cover opacity-70 transition-all duration-600 group-hover:scale-105 group-hover:opacity-80"
         />
       ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-forest-mid/60 to-forest-deep" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/60 to-surface-dark" />
       )}
 
       {/* Gradient */}
       <div
-        className="absolute inset-0 bg-gradient-to-t from-forest-deep via-forest-deep/20 to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/20 to-transparent"
         aria-hidden="true"
       />
 
@@ -48,7 +48,7 @@ export default function StoryCard({
         <Link
           href={story.href}
           aria-label={`${story.hasVideo ? "Play" : "View"} story: ${story.title}`}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30 hover:scale-110 focus-visible:ring-2 focus-visible:ring-cream"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-all duration-300 hover:bg-white/30 hover:scale-110 focus-visible:ring-2 focus-visible:ring-white"
         >
           <svg
             viewBox="0 0 24 24"
@@ -64,21 +64,21 @@ export default function StoryCard({
       {/* Meta */}
       <div className="absolute bottom-0 left-0 right-0 p-5">
         {story.farmerName && (
-          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-agri-yellow">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-accent">
             {story.farmerName}
           </p>
         )}
         <Link
           href={story.href}
-          className="block font-display text-lg font-bold leading-snug text-white transition-colors hover:text-cream/80"
+          className="block font-display text-lg font-bold leading-snug text-white transition-colors hover:text-white/80"
         >
           {story.title}
         </Link>
-        <p className="mt-1.5 line-clamp-2 text-sm text-cream/60">
+        <p className="mt-1.5 line-clamp-2 text-sm text-white/60">
           {story.description}
         </p>
         {story.durationLabel && (
-          <p className="mt-2 text-xs text-cream/40">{story.durationLabel}</p>
+          <p className="mt-2 text-xs text-white/40">{story.durationLabel}</p>
         )}
       </div>
     </article>

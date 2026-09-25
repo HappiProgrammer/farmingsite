@@ -27,7 +27,7 @@ export default function OrganizationSection({
               "flex flex-col gap-5 rounded-card-lg p-8",
               light
                 ? "bg-white/5 backdrop-blur-sm"
-                : "bg-cream-warm border border-parchment",
+                : "bg-off-white border border-border",
             ].join(" ")}
           >
             {/* Logo or acronym fallback */}
@@ -47,8 +47,8 @@ export default function OrganizationSection({
                   className={[
                     "flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-card text-lg font-bold",
                     light
-                      ? "bg-agri-yellow/20 text-agri-yellow"
-                      : "bg-forest-mid/10 text-forest-mid",
+                      ? "bg-accent/20 text-accent"
+                      : "bg-accent/10 text-accent",
                   ].join(" ")}
                   aria-label={`${org.acronym} — logo not yet provided`}
                 >
@@ -59,7 +59,7 @@ export default function OrganizationSection({
                 <p
                   className={[
                     "text-xs font-semibold uppercase tracking-widest",
-                    light ? "text-agri-yellow" : "text-forest-mid",
+                    light ? "text-accent" : "text-accent",
                   ].join(" ")}
                 >
                   {org.role}
@@ -67,7 +67,7 @@ export default function OrganizationSection({
                 <p
                   className={[
                     "font-display text-lg font-bold leading-tight",
-                    light ? "text-cream" : "text-forest-deep",
+                    light ? "text-white" : "text-ink",
                   ].join(" ")}
                 >
                   {org.acronym}
@@ -78,7 +78,7 @@ export default function OrganizationSection({
             <p
               className={[
                 "text-sm leading-relaxed",
-                light ? "text-cream/70" : "text-ink-mid",
+                light ? "text-white/70" : "text-ink-mid",
               ].join(" ")}
             >
               {org.description}

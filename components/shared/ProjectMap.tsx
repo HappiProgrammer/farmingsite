@@ -19,7 +19,7 @@ function PinCard({
 }) {
   return (
     <div
-      className="absolute z-20 w-56 rounded-card-lg border border-parchment bg-white p-4 shadow-lg"
+      className="absolute z-20 w-56 rounded-card-lg border border-border bg-white p-4 shadow-lg"
       style={{
         // Place the card above the pin; clamp so it never overflows the SVG edges
         left: `clamp(8px, calc(${(pin.cx / 1000) * 100}% - 7rem), calc(100% - 15rem))`,
@@ -33,20 +33,20 @@ function PinCard({
         type="button"
         onClick={onClose}
         aria-label="Close location card"
-        className="absolute right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full text-ink-light transition-colors hover:bg-parchment hover:text-ink"
+        className="absolute right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full text-ink-light transition-colors hover:bg-border hover:text-ink"
       >
         <svg viewBox="0 0 12 12" fill="none" className="h-3 w-3" aria-hidden="true">
           <path d="M2 2l8 8M10 2l-8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       </button>
 
-      <p className="mb-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-forest-mid">
+      <p className="mb-0.5 text-[0.6rem] font-semibold uppercase tracking-widest text-accent">
         {pin.label}
       </p>
 
       {pin.farmer ? (
         <>
-          <p className="font-display text-sm font-bold leading-tight text-forest-deep">
+          <p className="font-display text-sm font-bold leading-tight text-ink">
             {pin.farmer.name}
           </p>
           <p className="mt-0.5 text-xs text-ink-light">
@@ -54,7 +54,7 @@ function PinCard({
           </p>
           <Link
             href={`/farmers/${pin.farmer.slug}`}
-            className="mt-3 inline-block text-xs font-semibold text-forest-mid transition-colors hover:text-forest-deep"
+            className="mt-3 inline-block text-xs font-semibold text-accent transition-colors hover:text-ink"
           >
             View Profile →
           </Link>
@@ -124,7 +124,7 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
           "
           fill="#3a6b1e"
           fillOpacity="0.12"
-          stroke="#4a7c2f"
+          stroke="#2d6a2d"
           strokeWidth="2"
           strokeOpacity="0.35"
         />
@@ -139,7 +139,7 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
           <path
             key={i}
             d={d}
-            stroke="#4a7c2f"
+            stroke="#2d6a2d"
             strokeWidth="1"
             strokeOpacity="0.18"
             fill="none"
@@ -184,7 +184,7 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
           fontSize="13"
           fontWeight="600"
           letterSpacing="3"
-          fill="#2d5016"
+          fill="#111111"
           fillOpacity="0.5"
         >
           SOUTH WEST REGION · CAMEROON
@@ -227,9 +227,9 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
               {isActive && (
                 <circle
                   r="22"
-                  fill="#c8a84b"
+                  fill="#ffffff"
                   fillOpacity="0.2"
-                  stroke="#c8a84b"
+                  stroke="#ffffff"
                   strokeWidth="1"
                   strokeOpacity="0.4"
                 >
@@ -253,8 +253,8 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
               {/* Pin body — teardrop shape */}
               <path
                 d={`M 0 -22 C -10 -22, -16 -14, -16 -8 C -16 2, 0 16, 0 16 C 0 16, 16 2, 16 -8 C 16 -14, 10 -22, 0 -22 Z`}
-                fill={isActive ? "#c8a84b" : "#2d5016"}
-                stroke={isActive ? "#8b5e3c" : "#1a2e1a"}
+                fill={isActive ? "#ffffff" : "#2d6a2d"}
+                stroke={isActive ? "#111111" : "#1a2e1a"}
                 strokeWidth="1.5"
                 className="transition-all duration-200"
               />
@@ -263,7 +263,7 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
                 cx="0"
                 cy="-8"
                 r="4"
-                fill={isActive ? "#1a2e1a" : "#c8a84b"}
+                fill={isActive ? "#1a2e1a" : "#ffffff"}
                 className="transition-all duration-200"
               />
 
@@ -276,7 +276,7 @@ export default function ProjectMap({ pins, className = "" }: ProjectMapProps) {
                 fontSize="10"
                 fontWeight="600"
                 letterSpacing="0.5"
-                fill="#1a2e1a"
+                fill="#111111"
                 fillOpacity="0.7"
               >
                 {pin.label}
