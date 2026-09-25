@@ -13,10 +13,9 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-card-lg border border-border bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
-      {/* Cover image */}
       <Link
         href={profileHref}
-        className="relative block aspect-video overflow-hidden bg-off-white"
+        className="relative block aspect-video overflow-hidden bg-muted"
         tabIndex={-1}
         aria-hidden="true"
       >
@@ -29,8 +28,8 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
             className="object-cover transition-transform duration-600 group-hover:scale-105"
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-accent/10 to-off-white">
-            <svg viewBox="0 0 48 48" fill="none" className="h-12 w-12 text-accent/30" aria-hidden="true">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-off-white">
+            <svg viewBox="0 0 48 48" fill="none" className="h-12 w-12 text-border" aria-hidden="true">
               <path d="M24 44V26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
               <path d="M24 26C24 26 12 18 12 10c6 0 12 6 12 6s6-6 12-6c0 8-12 16-12 16z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
             </svg>
@@ -38,7 +37,6 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           </div>
         )}
 
-        {/* Status badge */}
         <div className="absolute left-3 top-3">
           <span
             className={[
@@ -51,7 +49,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
             <span
               className={[
                 "h-1.5 w-1.5 rounded-full",
-                nursery.isReady ? "bg-cream" : "bg-earth-light",
+                nursery.isReady ? "bg-white" : "bg-border",
               ].join(" ")}
               aria-hidden="true"
             />
@@ -59,19 +57,16 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           </span>
         </div>
 
-        {/* Seedlings available badge */}
         {nursery.hasAvailableSeedlings && (
           <div className="absolute right-3 top-3">
-            <span className="inline-flex items-center rounded-full bg-accent px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+            <span className="inline-flex items-center rounded-full bg-accent-light px-2.5 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
               Seedlings Available
             </span>
           </div>
         )}
       </Link>
 
-      {/* Card body */}
       <div className="flex flex-1 flex-col gap-4 p-5">
-        {/* Location + nursery name */}
         <div>
           <p className="text-xs font-medium uppercase tracking-wide text-ink-light">
             {nursery.locationArea}, {nursery.locationRegion}
@@ -84,7 +79,6 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           </Link>
         </div>
 
-        {/* Stats row */}
         <dl className="grid grid-cols-2 gap-3">
           {[
             {
@@ -104,13 +98,12 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
                 {term}
               </dt>
               <dd className="text-sm font-medium text-ink">
-                {value ?? <span className="italic text-ink-light/60">[{term}]</span>}
+                {value ?? <span className="italic text-ink-xlight">[{term}]</span>}
               </dd>
             </div>
           ))}
         </dl>
 
-        {/* Varieties */}
         {nursery.seedlingVarieties.length > 0 && (
           <div className="border-t border-border pt-3">
             <p className="mb-2 text-[0.65rem] font-semibold uppercase tracking-wider text-ink-light">
@@ -118,10 +111,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
             </p>
             <div className="flex flex-wrap gap-1.5">
               {nursery.seedlingVarieties.map((v, i) => (
-                <span
-                  key={i}
-                  className="rounded-full bg-off-white px-2.5 py-0.5 text-xs text-ink-mid"
-                >
+                <span key={i} className="rounded-full bg-off-white px-2.5 py-0.5 text-xs text-ink-mid">
                   {v.variety}
                 </span>
               ))}
@@ -129,14 +119,13 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           </div>
         )}
 
-        {/* Farmer attribution + CTA */}
         <div className="mt-auto flex items-center justify-between gap-3 border-t border-border pt-3">
           {farmer ? (
             <p className="text-xs text-ink-light">
               Farmer:{" "}
               <Link
                 href={`/farmers/${farmer.slug}`}
-                className="font-semibold text-accent transition-colors hover:text-ink"
+                className="font-semibold text-accent transition-colors hover:text-accent-dark"
               >
                 {farmer.name}
               </Link>
@@ -146,7 +135,7 @@ export default function NurseryCard({ nursery, farmer }: NurseryCardProps) {
           )}
           <Link
             href={profileHref}
-            className="flex-shrink-0 text-xs font-semibold text-accent transition-colors hover:text-ink"
+            className="flex-shrink-0 text-xs font-semibold text-accent transition-colors hover:text-accent-dark"
             aria-label={`View nursery and farmer profile for ${nursery.name}`}
           >
             View profile →

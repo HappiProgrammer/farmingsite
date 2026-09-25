@@ -61,11 +61,11 @@ export default function ContactPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
         aria-labelledby="contact-hero-heading"
       >
         <div className="container-content max-w-2xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Get in touch
           </p>
           <h1
@@ -74,7 +74,7 @@ export default function ContactPage() {
           >
             Contact
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-cream/65">
+          <p className="mt-6 text-lg leading-relaxed text-white/65">
             Enquire about seedling availability, nursery partnerships, project
             information, or press and media. We will get back to you as quickly
             as possible.
@@ -84,7 +84,7 @@ export default function ContactPage() {
 
       {/* ── Main content ─────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="contact-form-heading"
       >
         <div className="container-content grid gap-16 lg:grid-cols-[1fr_400px]">
@@ -101,7 +101,7 @@ export default function ContactPage() {
           {/* Contact details sidebar */}
           <aside aria-label="Contact details">
             <div className="sticky top-28 flex flex-col gap-6">
-              <h2 className="font-display text-lg font-bold text-forest-deep">
+              <h2 className="font-display text-lg font-bold text-ink">
                 Contact details
               </h2>
 
@@ -109,9 +109,9 @@ export default function ContactPage() {
                 {contactChannels.map(({ icon, label, value, href }) => (
                   <div
                     key={label}
-                    className="flex items-start gap-4 rounded-card border border-parchment bg-cream-warm p-4"
+                    className="flex items-start gap-4 rounded-card border border-border bg-off-white p-4"
                   >
-                    <div className="mt-0.5 flex-shrink-0 text-forest-mid">
+                    <div className="mt-0.5 flex-shrink-0 text-accent">
                       {icon}
                     </div>
                     <div className="flex flex-col gap-0.5">
@@ -121,7 +121,7 @@ export default function ContactPage() {
                       {href ? (
                         <a
                           href={href}
-                          className="text-sm font-medium text-forest-deep transition-colors hover:text-forest-mid"
+                          className="text-sm font-medium text-ink transition-colors hover:text-accent"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -138,8 +138,8 @@ export default function ContactPage() {
               </div>
 
               {/* Seedling buyers note */}
-              <div className="rounded-card-lg bg-agri-yellow/10 p-5 border border-agri-yellow/20">
-                <p className="text-xs font-semibold uppercase tracking-widest text-agri-yellow mb-2">
+              <div className="rounded-card-lg bg-accent-light p-5 border border-accent/20">
+                <p className="text-xs font-semibold uppercase tracking-widest text-accent mb-2">
                   Looking for seedlings?
                 </p>
                 <p className="text-sm leading-relaxed text-ink-mid">
@@ -149,7 +149,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="/nurseries"
-                  className="mt-3 inline-block text-sm font-semibold text-forest-mid transition-colors hover:text-forest-deep"
+                  className="mt-3 inline-block text-sm font-semibold text-accent transition-colors hover:text-accent-dark"
                 >
                   Explore nurseries →
                 </a>

@@ -16,11 +16,11 @@ export default function FarmerCard({
   hasAvailableSeedlings,
 }: FarmerCardProps) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-card-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
+    <article className="group flex flex-col overflow-hidden rounded-card-lg border border-border bg-white shadow-sm transition-shadow duration-300 hover:shadow-md">
       {/* Portrait */}
       <Link
         href={`/farmers/${farmer.slug}`}
-        className="relative block aspect-[4/3] overflow-hidden bg-cream-warm"
+        className="relative block aspect-[4/3] overflow-hidden bg-muted"
         tabIndex={-1}
         aria-hidden="true"
       >
@@ -50,8 +50,6 @@ export default function FarmerCard({
             </svg>
           </div>
         )}
-
-        {/* Verified badge overlay */}
         {farmer.verified && (
           <div className="absolute left-3 top-3">
             <VerificationBadge />
@@ -59,9 +57,7 @@ export default function FarmerCard({
         )}
       </Link>
 
-      {/* Content */}
       <div className="flex flex-1 flex-col gap-3 p-5">
-        {/* Name + location */}
         <div>
           <Link
             href={`/farmers/${farmer.slug}`}
@@ -74,22 +70,20 @@ export default function FarmerCard({
           </p>
         </div>
 
-        {/* Bio snippet */}
         {farmer.bio && (
           <p className="line-clamp-2 text-sm leading-relaxed text-ink-mid">
             {farmer.bio}
           </p>
         )}
 
-        {/* Nursery status row */}
         {nursery && (
-          <div className="flex flex-wrap items-center gap-2 border-t border-parchment pt-3">
+          <div className="flex flex-wrap items-center gap-2 border-t border-border pt-3">
             <span
               className={[
                 "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold",
                 nursery.isReady
-                  ? "bg-accent/10 text-accent"
-                  : "bg-border text-ink-light",
+                  ? "bg-accent-light text-accent"
+                  : "bg-off-white text-ink-light",
               ].join(" ")}
             >
               <span
@@ -103,14 +97,13 @@ export default function FarmerCard({
             </span>
 
             {hasAvailableSeedlings && (
-              <span className="rounded-full bg-accent/10 px-2.5 py-1 text-xs font-semibold text-ink">
+              <span className="rounded-full bg-accent-light px-2.5 py-1 text-xs font-semibold text-accent">
                 Seedlings Available
               </span>
             )}
           </div>
         )}
 
-        {/* CTA */}
         <div className="mt-auto pt-2">
           <Button
             href={`/farmers/${farmer.slug}`}

@@ -51,11 +51,11 @@ export default function NurseriesPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
         aria-labelledby="nurseries-hero-heading"
       >
         <div className="container-content max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Nursery Showcase
           </p>
           <h1
@@ -64,7 +64,7 @@ export default function NurseriesPage() {
           >
             The nurseries
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-cream/65">
+          <p className="mt-5 text-lg leading-relaxed text-white/65">
             Each nursery here is farmer-owned and supported through the
             AIVDP/SOWEDA programme. Browse by status or location, then
             contact the farmer directly about available seedlings.
@@ -81,7 +81,7 @@ export default function NurseriesPage() {
                 <span className="font-display text-display-md font-bold tabular-nums text-white">
                   {value}
                 </span>
-                <span className="text-xs font-semibold uppercase tracking-widest text-cream/40">
+                <span className="text-xs font-semibold uppercase tracking-widest text-white/40">
                   {label}
                 </span>
               </div>
@@ -92,7 +92,7 @@ export default function NurseriesPage() {
 
       {/* ── Directory ─────────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="nursery-directory-heading"
       >
         <div className="container-content flex flex-col gap-10">
@@ -112,7 +112,7 @@ export default function NurseriesPage() {
 
       {/* ── How to buy seedlings ──────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream-warm"
+        className="section-padding bg-off-white"
         aria-labelledby="how-to-buy-heading"
       >
         <div className="container-content grid gap-12 md:grid-cols-2">
@@ -139,8 +139,8 @@ export default function NurseriesPage() {
           </div>
 
           {/* Buyer guide */}
-          <div className="flex flex-col gap-4 rounded-card-lg border border-parchment bg-white p-6 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-widest text-forest-mid">
+          <div className="flex flex-col gap-4 rounded-card-lg border border-border bg-white p-6 shadow-sm">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
               Buyer guide
             </p>
             {[
@@ -150,7 +150,7 @@ export default function NurseriesPage() {
               "Discuss variety, quantity, and collection or delivery directly",
             ].map((step, i) => (
               <div key={i} className="flex items-start gap-3">
-                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-forest-mid/10 text-xs font-bold text-forest-mid">
+                <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-xs font-bold text-accent">
                   {i + 1}
                 </span>
                 <p className="text-sm leading-relaxed text-ink-mid">{step}</p>
@@ -161,12 +161,12 @@ export default function NurseriesPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="section-padding bg-forest-deep" aria-label="Call to action">
+      <section className="section-padding bg-surface-dark" aria-label="Call to action">
         <div className="container-content flex flex-col items-center gap-6 text-center">
-          <h2 className="font-display text-display-md font-bold text-cream">
+          <h2 className="font-display text-display-md font-bold text-white">
             Looking for the people, not just the plants?
           </h2>
-          <p className="max-w-md text-base text-cream/65">
+          <p className="max-w-md text-base text-white/65">
             Every nursery has a farmer behind it. Browse their full profiles,
             stories, and histories in the farmer directory.
           </p>

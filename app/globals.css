@@ -23,7 +23,7 @@
   }
 
   body {
-    @apply bg-white text-ink font-sans;
+    @apply bg-white font-sans; color: #111111;
     min-height: 100dvh;
   }
 
@@ -41,7 +41,7 @@
 
   /* Focus visible outline — accessible, not intrusive */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-accent rounded-sm;
+    @apply outline-2 outline-offset-2 outline-[#2d6a2d] rounded-sm;
   }
 
   /* Skip link: visually hidden until keyboard focus */
@@ -59,7 +59,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-ink;
+    @apply font-display; color: #111111;
   }
 
   p {
@@ -89,13 +89,14 @@
 
   /* Verification badge pill */
   .badge-verified {
-    @apply inline-flex items-center gap-1.5 rounded-full bg-accent-light px-2.5 py-1
-           text-xs font-semibold uppercase tracking-widest text-accent;
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-widest;
+    background-color: #e8f4e8;
+    color: #2d6a2d;
   }
 
   /* Placeholder state for missing data */
   .data-placeholder {
-    @apply inline-block rounded bg-muted px-2 py-0.5 text-ink-light italic;
+    @apply inline-block rounded px-2 py-0.5 italic; background-color: #f0f0f0; color: #888888;
   }
 }
 

@@ -83,7 +83,7 @@ export default function ImpactPage() {
         aria-labelledby="impact-hero-heading"
       >
         <div className="container-content max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Measured Impact
           </p>
           <h1
@@ -92,7 +92,7 @@ export default function ImpactPage() {
           >
             The numbers behind the story
           </h1>
-          <p className="mt-6 text-lg leading-relaxed text-cream/65">
+          <p className="mt-6 text-lg leading-relaxed text-white/65">
             Impact figures are drawn directly from project records. Where data
             has not yet been supplied, we show an honest placeholder rather
             than an invented number.
@@ -102,7 +102,7 @@ export default function ImpactPage() {
 
       {/* ── Counter grid ─────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-forest-deep border-t border-white/5"
+        className="section-padding bg-surface-dark border-t border-white/5"
         aria-labelledby="metrics-heading"
       >
         <div className="container-content flex flex-col gap-10">
@@ -115,7 +115,7 @@ export default function ImpactPage() {
 
       {/* ── Metric deep-dives ─────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="metric-detail-heading"
       >
         <div className="container-content flex flex-col gap-14">
@@ -125,20 +125,20 @@ export default function ImpactPage() {
             id="metric-detail-heading"
           />
 
-          <div className="flex flex-col divide-y divide-parchment">
+          <div className="flex flex-col divide-y divide-border">
             {metrics.map((metric) => (
               <div
                 key={metric.id}
                 className="grid items-start gap-8 py-10 first:pt-0 last:pb-0 md:grid-cols-[auto_1fr_auto]"
               >
                 {/* Icon */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-card bg-forest-mid/10 text-forest-mid">
+                <div className="flex h-16 w-16 items-center justify-center rounded-card bg-accent/10 text-accent">
                   <MetricDetailIcon name={metric.iconName} />
                 </div>
 
                 {/* Label + description */}
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-display text-xl font-bold text-forest-deep">
+                  <h3 className="font-display text-xl font-bold text-ink">
                     {metric.label}
                   </h3>
                   {metric.description && (
@@ -151,8 +151,8 @@ export default function ImpactPage() {
                     <span
                       className={
                         metric.status === "confirmed"
-                          ? "text-forest-mid"
-                          : "text-earth-mid"
+                          ? "text-accent"
+                          : "text-ink-mid"
                       }
                     >
                       {metric.status === "confirmed"
@@ -167,7 +167,7 @@ export default function ImpactPage() {
                 {/* Value */}
                 <div className="flex flex-col items-end gap-1 text-right">
                   {metric.value !== null ? (
-                    <span className="font-display text-display-md font-bold text-forest-deep tabular-nums">
+                    <span className="font-display text-display-md font-bold text-ink tabular-nums">
                       {metric.displayValue}
                     </span>
                   ) : (
@@ -188,7 +188,7 @@ export default function ImpactPage() {
 
       {/* ── Methodology note ──────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream-warm"
+        className="section-padding bg-off-white"
         aria-labelledby="methodology-heading"
       >
         <div className="container-content grid gap-12 md:grid-cols-2">
@@ -212,11 +212,11 @@ export default function ImpactPage() {
           </div>
 
           {/* Platform farmers count — this is real, derived from the data layer */}
-          <div className="flex flex-col gap-4 rounded-card-lg bg-white p-8 shadow-sm border border-parchment">
-            <p className="text-xs font-semibold uppercase tracking-widest text-forest-mid">
+          <div className="flex flex-col gap-4 rounded-card-lg bg-white p-8 shadow-sm border border-border">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
               Live on this platform
             </p>
-            <p className="font-display text-display-lg font-bold text-forest-deep tabular-nums">
+            <p className="font-display text-display-lg font-bold text-ink tabular-nums">
               {farmerCount}
             </p>
             <p className="text-sm text-ink-mid">
@@ -231,12 +231,12 @@ export default function ImpactPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <section className="section-padding bg-forest-deep" aria-label="Call to action">
+      <section className="section-padding bg-surface-dark" aria-label="Call to action">
         <div className="container-content flex flex-col items-center gap-6 text-center">
-          <h2 className="font-display text-display-md font-bold text-cream">
+          <h2 className="font-display text-display-md font-bold text-white">
             Explore the people behind these numbers
           </h2>
-          <p className="max-w-md text-base text-cream/65">
+          <p className="max-w-md text-base text-white/65">
             Each metric represents real farmers with real nurseries. Browse
             the directory to see who they are.
           </p>

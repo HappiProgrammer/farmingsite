@@ -37,11 +37,11 @@ export default function FarmersPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
         aria-labelledby="farmers-hero-heading"
       >
         <div className="container-content max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Farmer Directory
           </p>
           <h1
@@ -50,7 +50,7 @@ export default function FarmersPage() {
           >
             Meet the farmers
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-cream/65">
+          <p className="mt-5 text-lg leading-relaxed text-white/65">
             Every farmer listed here is a verified participant in the
             AIVDP/SOWEDA oil-palm development programme. Each has a story, a
             nursery, and — where available — seedlings for sale. Contact them
@@ -61,7 +61,7 @@ export default function FarmersPage() {
 
       {/* ── Directory ─────────────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="directory-heading"
       >
         <div className="container-content flex flex-col gap-10">

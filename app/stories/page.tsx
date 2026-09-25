@@ -24,11 +24,11 @@ export default function StoriesPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-forest-deep pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
         aria-labelledby="stories-hero-heading"
       >
         <div className="container-content max-w-3xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
             Farmer Stories
           </p>
           <h1
@@ -37,7 +37,7 @@ export default function StoriesPage() {
           >
             Stories from the field
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-cream/65">
+          <p className="mt-5 text-lg leading-relaxed text-white/65">
             Every number in this project has a face behind it. These are the
             real stories of oil-palm farmers — their challenges, their
             nurseries, and what changed when support arrived.
@@ -48,16 +48,16 @@ export default function StoriesPage() {
       {/* ── Featured video ─────────────────────────────────────────────────── */}
       {featured && (
         <section
-          className="section-padding bg-forest-deep border-t border-white/5"
+          className="section-padding bg-surface-dark border-t border-white/5"
           aria-labelledby="featured-story-heading"
         >
           <div className="container-content flex flex-col gap-8">
             <div className="flex items-center justify-between gap-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-agri-yellow">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                 Featured Story
               </p>
               {featured.durationLabel && (
-                <span className="text-xs text-cream/40">{featured.durationLabel}</span>
+                <span className="text-xs text-white/40">{featured.durationLabel}</span>
               )}
             </div>
             <FeaturedStoryPlayer story={featured} />
@@ -68,7 +68,7 @@ export default function StoriesPage() {
       {/* ── Story grid ───────────────────────────────────────────────────── */}
       {rest.length > 0 && (
         <section
-          className="section-padding bg-cream-warm"
+          className="section-padding bg-off-white"
           aria-labelledby="more-stories-heading"
         >
           <div className="container-content flex flex-col gap-10">
@@ -90,17 +90,17 @@ export default function StoriesPage() {
 
       {/* ── Placeholder when no additional stories ──────────────────────── */}
       {rest.length === 0 && (
-        <section className="section-padding bg-cream" aria-label="More stories coming">
+        <section className="section-padding bg-white" aria-label="More stories coming">
           <div className="container-content">
-            <div className="flex flex-col items-center gap-6 rounded-card-lg border border-dashed border-parchment bg-cream-warm py-16 text-center">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-mid/10 text-forest-mid">
+            <div className="flex flex-col items-center gap-6 rounded-card-lg border border-dashed border-border bg-off-white py-16 text-center">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-accent-light text-accent">
                 <svg viewBox="0 0 24 24" fill="none" className="h-7 w-7" aria-hidden="true">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.8" />
                   <path d="M10 8l6 4-6 4V8z" fill="currentColor" />
                 </svg>
               </div>
               <div>
-                <h2 className="font-display text-xl font-bold text-forest-deep">
+                <h2 className="font-display text-xl font-bold text-ink">
                   More stories coming
                 </h2>
                 <p className="mt-2 max-w-sm text-sm text-ink-mid">
@@ -116,7 +116,7 @@ export default function StoriesPage() {
 
       {/* ── About the stories ─────────────────────────────────────────────── */}
       <section
-        className="section-padding bg-cream"
+        className="section-padding bg-white"
         aria-labelledby="about-stories-heading"
       >
         <div className="container-content grid gap-12 md:grid-cols-2">
@@ -139,7 +139,7 @@ export default function StoriesPage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <p className="text-xs font-semibold uppercase tracking-widest text-forest-mid">
+            <p className="text-xs font-semibold uppercase tracking-widest text-accent">
               Want to find a nursery?
             </p>
             <p className="text-sm leading-relaxed text-ink-mid">
@@ -150,7 +150,7 @@ export default function StoriesPage() {
               <Button href="/farmers" variant="primary" size="md">
                 Browse Farmers
               </Button>
-              <Button href="/nurseries" variant="ghost" size="md" className="!text-forest-mid">
+              <Button href="/nurseries" variant="ghost" size="md" className="!text-accent">
                 Explore Nurseries
               </Button>
             </div>
