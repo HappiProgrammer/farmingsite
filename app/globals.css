@@ -25,6 +25,8 @@
   body {
     @apply bg-white font-sans; color: #111111;
     min-height: 100dvh;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
   }
 
   /* Reduce motion for users who prefer it */
@@ -79,12 +81,12 @@
 @layer components {
   /* Standard section container */
   .container-content {
-    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
+    @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8; overflow-x: hidden;
   }
 
   /* Section vertical rhythm */
   .section-padding {
-    @apply py-section lg:py-section-lg;
+    @apply py-10 sm:py-14 lg:py-section xl:py-section-lg;
   }
 
   /* Verification badge pill */
@@ -102,6 +104,11 @@
 
 /* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
 @layer utilities {
+  /* Touch-friendly tap response */
+  button, a, [role="button"] {
+    touch-action: manipulation;
+  }
+
   .scrollbar-none {
     scrollbar-width: none;
   }

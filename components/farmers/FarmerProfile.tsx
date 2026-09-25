@@ -19,7 +19,7 @@ export default function FarmerProfile({
   return (
     <article aria-label={`Profile of ${farmer.name}`}>
       {/* ── Profile hero ─────────────────────────────────────────────────── */}
-      <div className="relative bg-surface-dark pt-[calc(var(--nav-height)+2rem)] pb-16 lg:pb-20">
+      <div className="relative bg-surface-dark pt-[calc(var(--nav-height)+1.5rem)] pb-8 sm:pb-12 lg:pb-20">
 
         <div className="container-content relative z-10">
           {/* Breadcrumb */}
@@ -43,9 +43,9 @@ export default function FarmerProfile({
             </ol>
           </nav>
 
-          <div className="grid items-end gap-10 md:grid-cols-[auto_1fr]">
+          <div className="grid items-center gap-4 grid-cols-[auto_1fr] sm:gap-6 md:gap-10">
             {/* Portrait */}
-            <div className="relative h-40 w-40 flex-shrink-0 overflow-hidden rounded-card-lg border-2 border-border md:h-48 md:w-48">
+            <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-card-lg border-2 border-border sm:h-32 sm:w-32 md:h-48 md:w-48">
               {farmer.portraitSrc ? (
                 <Image
                   src={farmer.portraitSrc}
@@ -98,9 +98,9 @@ export default function FarmerProfile({
 
       {/* ── Story + nursery ───────────────────────────────────────────────── */}
       <div className="section-padding bg-white">
-        <div className="container-content grid gap-14 lg:grid-cols-[1fr_380px]">
+        <div className="container-content grid gap-8 sm:gap-10 lg:grid-cols-[1fr_380px] lg:gap-14">
           {/* Main column: story + gallery */}
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-8">
             {/* Bio */}
             {farmer.bio && (
               <div className="flex flex-col gap-3">
@@ -145,8 +145,8 @@ export default function FarmerProfile({
           </div>
 
           {/* Sidebar: nursery block + CTA */}
-          <aside className="flex flex-col gap-6" aria-label="Nursery information">
-            <div className="sticky top-28 flex flex-col gap-6">
+          <aside className="flex flex-col gap-4 order-first lg:order-last" aria-label="Nursery information">
+            <div className="flex flex-col gap-4 lg:sticky lg:top-28">
               {nursery ? (
                 <div className="rounded-card-lg border border-border bg-off-white p-6 shadow-sm">
                   {/* Nursery header */}

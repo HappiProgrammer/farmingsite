@@ -61,7 +61,7 @@ export default function ContactPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+2rem)] pb-10 sm:pb-16 lg:pb-24 sm:pt-[calc(var(--nav-height)+3rem)] lg:pt-[calc(var(--nav-height)+4rem)]"
         aria-labelledby="contact-hero-heading"
       >
         <div className="container-content max-w-2xl">
@@ -87,7 +87,7 @@ export default function ContactPage() {
         className="section-padding bg-white"
         aria-labelledby="contact-form-heading"
       >
-        <div className="container-content grid gap-16 lg:grid-cols-[1fr_400px]">
+        <div className="container-content grid gap-10 lg:grid-cols-[1fr_400px] lg:gap-16">
           {/* Form column */}
           <div className="flex flex-col gap-8">
             <SectionHeading
@@ -109,7 +109,7 @@ export default function ContactPage() {
                 {contactChannels.map(({ icon, label, value, href }) => (
                   <div
                     key={label}
-                    className="flex items-start gap-4 rounded-card border border-border bg-off-white p-4"
+                    className="flex items-start gap-3 rounded-card border border-border bg-off-white p-3 sm:p-4"
                   >
                     <div className="mt-0.5 flex-shrink-0 text-accent">
                       {icon}

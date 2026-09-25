@@ -48,7 +48,7 @@ export default function SceneNurseries({ nurseriesWithFarmers }: SceneNurseriesP
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={staggerContainer}
-          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
         >
           {preview.map(({ nursery, farmer }) => (
             <motion.div key={nursery.id} variants={staggerItem}>

@@ -56,7 +56,7 @@ export default function TheProjectPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-20 lg:pb-28"
+        className="relative overflow-hidden bg-surface-dark pt-[calc(var(--nav-height)+2rem)] pb-10 sm:pb-16 lg:pb-24 sm:pt-[calc(var(--nav-height)+3rem)] lg:pt-[calc(var(--nav-height)+4rem)]"
         aria-labelledby="project-hero-heading"
       >
         <div className="container-content relative z-10 max-w-3xl">

@@ -37,7 +37,7 @@ export default function FarmersPage() {
     <div className="flex flex-col">
       {/* ── Page hero ─────────────────────────────────────────────────────── */}
       <section
-        className="bg-surface-dark pt-[calc(var(--nav-height)+4rem)] pb-16 lg:pb-20"
+        className="bg-surface-dark pt-[calc(var(--nav-height)+2rem)] pb-8 sm:pb-12 lg:pb-20 sm:pt-[calc(var(--nav-height)+3rem)] lg:pt-[calc(var(--nav-height)+4rem)]"
         aria-labelledby="farmers-hero-heading"
       >
         <div className="container-content max-w-3xl">

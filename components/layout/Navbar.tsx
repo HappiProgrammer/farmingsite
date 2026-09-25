@@ -46,7 +46,7 @@ export default function Navbar() {
           ? "bg-transparent"
           : "bg-white border-b border-border shadow-sm",
       ].join(" ")}
-      style={{ height: "var(--nav-height)" }}
+      style={{ height: "var(--nav-height)" }} role="banner"
     >
       <div className="container-content flex h-full items-center justify-between">
         {/* Logo / wordmark */}
@@ -65,7 +65,7 @@ export default function Navbar() {
           </span>
           <span
             className={[
-              "font-display text-base font-bold italic transition-colors duration-400",
+              "font-display text-sm font-bold italic transition-colors duration-400 sm:text-base",
               transparent ? "text-white" : "text-ink",
             ].join(" ")}
           >
@@ -156,7 +156,7 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 className={[
-                  "rounded-lg px-4 py-3 text-base font-medium transition-colors",
+                  "rounded-lg px-4 py-3.5 text-base font-medium transition-colors",
                   active
                     ? "bg-accent-light text-accent"
                     : "text-ink/80 hover:bg-off-white hover:text-ink",

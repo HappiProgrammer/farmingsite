@@ -34,18 +34,18 @@ const config: Config = {
       },
       fontSize: {
         // Storytelling scale
-        "display-2xl": ["clamp(3rem, 7vw, 6rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
-        "display-xl":  ["clamp(2.25rem, 5vw, 4.5rem)", { lineHeight: "1.08", letterSpacing: "-0.025em" }],
-        "display-lg":  ["clamp(1.75rem, 3.5vw, 3rem)", { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
-        "display-md":  ["clamp(1.375rem, 2.5vw, 2.25rem)", { lineHeight: "1.15", letterSpacing: "-0.015em" }],
+        "display-2xl": ["clamp(2rem, 7vw, 6rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        "display-xl":  ["clamp(1.75rem, 5vw, 4.5rem)", { lineHeight: "1.08", letterSpacing: "-0.025em" }],
+        "display-lg":  ["clamp(1.5rem, 3.5vw, 3rem)", { lineHeight: "1.1",  letterSpacing: "-0.02em" }],
+        "display-md":  ["clamp(1.25rem, 2.5vw, 2.25rem)", { lineHeight: "1.15", letterSpacing: "-0.015em" }],
       },
       spacing: {
         "18": "4.5rem",
         "22": "5.5rem",
         "26": "6.5rem",
         "30": "7.5rem",
-        "section": "6rem",         // standard vertical section padding
-        "section-lg": "9rem",
+        "section": "4rem",         // standard vertical section padding
+        "section-lg": "7rem",
       },
       maxWidth: {
         "prose-wide": "75ch",

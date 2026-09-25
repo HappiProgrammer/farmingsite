@@ -103,7 +103,7 @@ export default function HeroVideo() {
           className="absolute inset-0 z-10 flex items-end"
           style={reduced ? staticStyle : { opacity: textOpacity, y: textY }}
         >
-          <div className="container-content pb-20 pt-40 md:pb-28 lg:pb-32">
+          <div className="container-content pb-14 pt-28 sm:pb-20 sm:pt-40 md:pb-28 lg:pb-32">
             <div className="max-w-2xl">
               <p className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
                 AIVDP / SOWEDA
@@ -119,11 +119,11 @@ export default function HeroVideo() {
                 nursery development, and agricultural opportunity for oil-palm
                 farmers in the South West Region.]
               </p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Button href="/the-project" variant="primary" size="lg">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+                <Button href="/the-project" variant="primary" size="md" className="sm:!px-7 sm:!py-3.5 sm:!text-base">
                   Explore the Project
                 </Button>
-                <Button href="/farmers" variant="outline-light" size="lg">
+                <Button href="/farmers" variant="outline-light" size="md" className="sm:!px-7 sm:!py-3.5 sm:!text-base">
                   Meet the Farmers
                 </Button>
               </div>

@@ -21,9 +21,9 @@ export default function SceneIntervention({ organizations }: SceneInterventionPr
       aria-labelledby="scene-intervention-heading"
     >
       <div className="container-content">
-        <div className="grid items-start gap-12 md:grid-cols-2 md:gap-20">
+        <div className="grid items-start gap-8 md:grid-cols-2 md:gap-16">
           {/* Pull quote */}
-          <div className="sticky top-28 flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:sticky md:top-28">
             <motion.p
               initial="hidden"
               whileInView="visible"

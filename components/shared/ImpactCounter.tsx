@@ -102,7 +102,7 @@ function CounterCard({ metric }: { metric: ProjectMetricDTO }) {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center gap-3 rounded-card-lg bg-white/5 px-6 py-8 text-center backdrop-blur-sm"
+      className="flex flex-col items-center gap-3 rounded-card-lg bg-white/5 px-4 py-6 text-center backdrop-blur-sm sm:px-6 sm:py-8"
     >
       {/* Icon */}
       <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white">
@@ -145,7 +145,7 @@ export default function ImpactCounter({
 }) {
   return (
     <div
-      className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
+      className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:gap-4"
       aria-label="Project impact metrics"
     >
       {metrics.map((metric) => (
